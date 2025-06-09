@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="../static/styles/style.css" />
+    <title>Trackfit - Track Your Health App</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <div class="nav__header">
+          <div class="nav__logo">
+            <a href="#"><img src="{{ url_for('static', filename='styles/about.png') }}" alt="Trackfit App Interface" /></a>  
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <span><i class="ri-menu-line"></i></span>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li class="link"><a href="#home">Home</a></li>
+          <li class="link"><a href="#about">About</a></li>
+          <li class="link"><a href="{{ url_for('view_weight') }}">Body Weight & Fat</a></li>
+          <li class="link"><a href="/workouts">Workouts</a></li>
+          <li class="link"><a href="/sleep">Sleep</a></li>
+          <li class="link"><a href="{{ url_for('view_happiness') }}">Mental Health</a></li>
+          <li class="link"><a href="{{ url_for('view_meals') }}">Meals</a></li>
+          <a class="btn">Contact Us</a>
+        </ul>
+      </nav>
+      <div class="section__container header__container" id="home">
+        <div class="header__image">
+          <img src="{{ url_for('static', filename='styles/about.png') }}" alt="header" />
+        </div>
+        <div class="header__content">
+          <h4>Build Your Body &</h4>
+          <h1 class="section__header">Shape Yourself!</h1>
+          <p>
+            Welcome to Trackfit! Be Empowered! Start your journey with us, a journey to make you fitter, stronger 
+            and more confident in your skin. Use our platform
+            now and witness the incredible transformation you are capable
+            of! Track your workouts and stay in control of your Health always.
+          </p>
+          <div class="header__btn">
+            <a class="btn">Explore Today</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section__container about__container" id="about">
+      <div class="about__image">
+        <img src="{{ url_for('static', filename='styles/pic1.jpg') }}" alt="about" />
+      </div>
+      <div class="about__content">
+        <h2 class="section__header">Our Story</h2>
+        <p class="section__description">
+          This is a web application which will be your personal health tracker. 
+          The application is designed to help you monitor your health and wellbeing, 
+          track workouts, weight, sleep and nutrition intake. 
+          Visualize trends over time to make best and aware decisions to improve your health.
+        </p>
+        <div class="about__grid">
+          <div class="about__card">
+            <span><i class="ri-open-arm-line"></i></span>
+            <div>
+              <h4>All are invited to the party!</h4>
+              <p>
+                The platform is open and unrestricted, available to all fitness and health enthusiasts like you!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="../main.js"></script>
+  </body>
+</html>
